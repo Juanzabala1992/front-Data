@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="container-form">
+      <form (ngSubmit)="dataSend()" [formGroup]="formData" class="form-input">
+        <div class="title">
+            <h3>Ingrese un número</h3>
+        </div>
+        <div class="inputs">
+          <label class="form-label">Numero</label>
+          <input type="text" class="form-control" id="data" name="data" 
+          formControlName="data" required>           
+        </div>
+        
+        <div class="alert-danger" *ngIf="formData.get('data')?.hasError('pattern') && formData.get('data')?.dirty" >
+          <div class="container-error-message">
+            Error confirme verifique los valores ingresados
+          </div>          
+        </div>  
+        <div class="button">
+          <button type="submit" class="btn btn-primary" [disabled]="!formData.valid" (click)="dataSend()">Enviar</button>        
+        </div>
+      </form>      
+    </div>    
+  </div>

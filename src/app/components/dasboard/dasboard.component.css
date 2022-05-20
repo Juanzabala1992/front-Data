@@ -1,0 +1,39 @@
+body{
+    margin: 0%;
+    padding: 0%;    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;  
+}
+.form-input{
+    width: 70%;
+}
+.title{
+    width: 80%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;   
+    color: white; 
+}
+.form-label{
+    color: white;
+}
+.container-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 70%;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(76,76,171,1) 83%);
+    border-radius: 8px;
+}
+.button{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}

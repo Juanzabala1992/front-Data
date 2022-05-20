@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="container-form">
+    <form (ngSubmit)="userLogin()" [formGroup]="formLogin" class="form-input">
+      <div class="title">
+          <h1>Login</h1>
+      </div>
+      <div class="inputs">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email" class="form-control" id="userId" name="userId" 
+        formControlName="userId" required>
+        <div class="alert-danger" *ngIf="formLogin.get('userId')?.hasError('email') 
+        && formLogin.get('userId')?.dirty" >
+          <div class="container-error-message">
+             Email invalido
+          </div>
+        </div>                   
+      </div>
+      <div class="inputs">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password"
+        formControlName="password" required>
+        <div class="alert-danger" *ngIf="formLogin.get('password')?.hasError('minlength') && formLogin.get('password')?.dirty" >
+          <div class="container-error-message">
+             La contraseña de ser de la menos 6 caracteres
+          </div>
+        </div>
+      </div>
+      <div class="button">
+        <button type="submit" class="btn btn-primary" [disabled]="!formLogin.valid">Iniciar sesión</button>        
+      </div>
+      <div class="button">
+        <a  class="link" [routerLink]="['/register']">Registrase</a>
+    </div>      
+    </form>      
+  </div>    
+</div>

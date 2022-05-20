@@ -1,0 +1,22 @@
+.navbar{    
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(76,76,171,1) 83%);
+}
+.navbar-brand{
+    color: white;
+}
+.icon{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.img-icon{
+    color: white;
+    font-size: 30px;
+    width: 10%;
+}
+.img-icon:hover{
+    color:black;
+    cursor: pointer;
+}

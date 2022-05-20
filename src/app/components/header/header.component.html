@@ -1,0 +1,10 @@
+<div class="navbar-header">
+    <nav class="navbar row justify-content-between">
+        <div class="container-fluid col ms-2">
+          <a class="navbar-brand" href="#">DataTools</a>          
+        </div>
+        <div class="icon d-flex col justify-content-end me-2" *ngIf="show">                    
+            <fa-icon class="img-icon" (click)="logOut()"[icon]="faDoorOpen"></fa-icon>
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,62 @@
+<div class="container">
+    <form (ngSubmit)="register()" [formGroup]="formregister" class="form-input">
+        <div class="container-form">
+            <div class="title">
+                <h2>Formulario de registro</h2>
+            </div>
+            <div class="inputs">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" name="name" 
+                formControlName="name" required>
+                <div class="alert-danger" *ngIf="formregister.get('name')?.hasError('minlength') 
+                && formregister.get('name')?.dirty" >
+                  <div class="container-error-message">
+                     Nombre debe ser de al menos 3 caracteres
+                  </div>
+                </div>                   
+              </div>
+    
+              <div class="inputs">
+                <label class="form-label">Apellido</label>
+                <input type="email" class="form-control" id="lastname" name="lastname" 
+                formControlName="lastname" required>
+                <div class="alert-danger" *ngIf="formregister.get('lastname')?.hasError('minlength') 
+                && formregister.get('lastname')?.dirty" >
+                  <div class="container-error-message">
+                    Apellido debe ser de al menos 3 caracteres
+                  </div>
+                </div>                   
+              </div>
+    
+    
+            <div class="inputs">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" 
+                formControlName="email" required>
+                <div class="alert-danger" *ngIf="formregister.get('email')?.hasError('email') 
+                && formregister.get('email')?.dirty" >
+                  <div class="container-error-message">
+                     Email invalido
+                  </div>
+                </div>                   
+              </div>
+              <div class="inputs">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password"
+                formControlName="password" required>
+                <div class="alert-danger" *ngIf="formregister.get('password')?.hasError('minlength') 
+                && formregister.get('password')?.dirty" >
+                  <div class="container-error-message">
+                     La contraseña de ser de la menos 6 caracteres
+                  </div>
+                </div>
+              </div>
+              <div class="button">
+                <button type="submit" class="btn btn-primary" [disabled]="!formregister.valid">Registrarse</button>
+              </div>
+            <div class="button">
+                <a [routerLink]="['/login']">¿Ya tienes cuenta?</a>
+            </div>
+        </div>    
+    </form>
+</div>

@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;    
+}
+.form-input{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container-form{
+    width: 100%;
+}
+.inputs{
+    width: 100%;
+}
+.button{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
